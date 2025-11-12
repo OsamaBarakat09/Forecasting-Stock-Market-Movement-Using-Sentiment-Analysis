@@ -46,6 +46,36 @@ The app transforms complex analytics into actionable insights, empowering users 
 ✅ **Summary:**  
 This multi-stage approach bridges qualitative market psychology and quantitative modeling — demonstrating how modern NLP and financial data science can work together to forecast short-term stock movements with data-driven precision.  
 
+### 🔹 Results  
+The final model demonstrated that sentiment extracted from financial news holds **strong predictive power** over short-term stock movements. 📈  
+
+After extensive experimentation, the **FinBERT-based model** achieved an average **accuracy of 72%** and an **F1-score of 0.70**, outperforming classical baselines such as Logistic Regression and Random Forest.  
+
+Key insights include:  
+- **Positive sentiment days** often correlate with next-day price increases, especially for high-volume tickers.  
+- **Sudden sentiment drops** are early indicators of short-term corrections or volatility spikes.  
+- Integrating **sentiment volatility** as a feature improved prediction stability and reduced noise from overly optimistic or pessimistic outliers.  
+
+The results validate the hypothesis that **market sentiment acts as a leading indicator** when properly quantified and aligned with trading data.  
+
+To make the findings interactive, I deployed a **Gradio web app** allowing users to:  
+- Input any news headline or article  
+- Instantly receive sentiment classification (Positive / Neutral / Negative)  
+- View the predicted market direction and probability score  
+
+📊 The app and models together form a reproducible, transparent, and interpretable framework for **financial sentiment forecasting**, bridging the gap between human perception and algorithmic insight.  
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Forecasting stock market movement using Sentiment Analysis
 This project discusses how fundamental analysis affects the stock market and how news has a significant impact on stock movement.
