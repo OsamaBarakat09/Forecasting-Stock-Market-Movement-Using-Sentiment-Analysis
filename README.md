@@ -24,9 +24,17 @@
 ---
 
 ## 📘 Project Overview
-This project provides a **comprehensive end-to-end pipeline** to forecast stock market movements using sentiment extracted from financial news. It integrates **web scraping**, **NLP preprocessing**, **sentiment analysis**, and **financial indicators** to generate actionable insights for investors and analysts.  
+This project presents a **comprehensive, end-to-end pipeline** for forecasting stock market movements using sentiment analysis of financial news. Financial markets are inherently influenced by public perception — including news headlines, analyst opinions, and social media discussions. By quantifying sentiment from diverse textual sources, this project bridges the gap between qualitative market psychology and quantitative financial modeling.  
 
-The goal is to demonstrate how modern NLP techniques can be applied to financial data to predict short-term stock price trends with interpretable results.
+The pipeline integrates **web scraping, natural language processing (NLP), feature engineering, machine learning, and financial indicators**, providing a robust framework for short-term market trend prediction. It is designed to be **scalable, reproducible, and interpretable**, allowing both researchers and practitioners to replicate the results or extend the methodology to other markets.  
+
+Key aspects of this project include:  
+- **Multi-source data integration:** Collects news from major financial platforms such as *CNBC, Reuters,* and *CoinDesk*, ensuring coverage of global market events.  
+- **Advanced NLP processing:** Uses transformer-based models (FinBERT) alongside classical sentiment analysis for high-accuracy financial sentiment classification.  
+- **Feature-rich modeling:** Combines textual sentiment with technical financial indicators such as Moving Averages (MA) and Relative Strength Index (RSI) to capture both qualitative and quantitative signals.  
+- **Interactive deployment:** Provides a Gradio-based dashboard for real-time input of news headlines and instant sentiment-based market predictions, making the insights actionable for decision-makers.  
+
+Overall, this project demonstrates how modern AI techniques can be applied to the financial domain to extract meaningful signals from unstructured textual data, supporting data-driven investment decisions and predictive analytics. It highlights a **practical application of NLP in finance**, with a focus on interpretability, accuracy, and usability for both technical and non-technical audiences.
 
 ---
 
