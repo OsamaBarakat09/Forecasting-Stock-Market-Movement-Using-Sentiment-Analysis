@@ -186,7 +186,3 @@ Interactive Gradio app enables:
 - Email: `Osamabarakat021@gmail.com`  
 - LinkedIn: [linkedin.com/in/osamabarakat](https://www.linkedin.com/in/osama-barakat-9b1b511b8/)  
 - GitHub: [github.com/osamabarakat](https://github.com/OsamaBarakat09)  
-
----
-
-✅ *This README is now fully professional, globally ordered, and portfolio-ready. It highlights your technical expertise, data science workflow, and real-world application in financial sentiment forecasting.*
