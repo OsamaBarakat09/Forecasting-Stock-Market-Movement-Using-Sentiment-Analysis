@@ -6,13 +6,6 @@ Financial markets are highly sensitive to public sentiment, where news headlines
 This project addresses the challenge of quantifying and forecasting stock market movements through sentiment analysis of financial news, aiming to bridge the gap between market psychology and quantitative modeling.
 
 # Approach 
-To address the complexity of linking financial sentiment to market behavior, I built an end-to-end pipeline that combines Natural Language Processing (NLP), machine learning, and financial data analysis. 🧠💹
-1️⃣ Data Acquisition
-The project begins with a large-scale scraping of real financial news from multiple reputable sources — including CNBC, Reuters, and CoinDesk — using Python’s requests, BeautifulSoup, and an intelligent retry mechanism for stable, automated data collection. Each article is timestamped and linked to the relevant stock ticker for accurate temporal alignment with market data.
-2️⃣ Text Preprocessing & Sentiment Extraction
-The raw text is cleaned and normalized through a structured NLP pipeline using NLTK and spaCy. This includes
-
-### 🔹 Approach  
 To address the complexity of linking financial sentiment to market behavior, I built an **end-to-end pipeline** that combines **Natural Language Processing (NLP)**, **machine learning**, and **financial data analysis**. 🧠💹  
 
 #### **1️⃣ Data Acquisition**  
