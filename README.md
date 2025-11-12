@@ -14,12 +14,8 @@
 5. [Tech Stack](#tech-stack)
 6. [News Data Overview](#news-data-overview)
 7. [Key Features](#key-features)
-8. [How to Use](#how-to-use)
-9. [File Structure](#file-structure)
-10. [Screenshots](#screenshots)
-11. [Future Work](#future-work)
-12. [References](#references)
-13. [Author](#author)
+8. [References](#references)
+9. [Author](#author)
 
 ---
 
