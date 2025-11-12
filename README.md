@@ -23,7 +23,7 @@
 
 ---
 
-## 📘 Project Overview
+# 💡Project Overview
 This project presents a **comprehensive, end-to-end pipeline** for forecasting stock market movements using sentiment analysis of financial news. Financial markets are inherently influenced by public perception — including news headlines, analyst opinions, and social media discussions. By quantifying sentiment from diverse textual sources, this project bridges the gap between qualitative market psychology and quantitative financial modeling.  
 
 The pipeline integrates **web scraping, natural language processing (NLP), feature engineering, machine learning, and financial indicators**, providing a robust framework for short-term market trend prediction. It is designed to be **scalable, reproducible, and interpretable**, allowing both researchers and practitioners to replicate the results or extend the methodology to other markets.  
