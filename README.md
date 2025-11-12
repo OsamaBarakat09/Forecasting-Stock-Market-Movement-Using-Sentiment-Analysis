@@ -1,9 +1,24 @@
-# Project Title
-Forecasting stock market movement using Sentiment Analysis
+# Forecasting Stock Market Movement Using Sentiment Analysis
+
+## 📑 Table of Contents
+1. [Problem](#problem)
+2. [Approach](#approach)
+3. [Results](#results)
+4. [Tech Stack](#tech-stack)
+5. [News Data Overview](#news-data-overview)
+6. [Project Summary](#project-summary--forecasting-stock-market-movement-using-news-data)
+7. [Key Features](#key-features)
+8. [How to Use](#how-to-use)
+9. [File Structure](#file-structure)
+
+---
 
 # Problem
 Financial markets are highly sensitive to public sentiment, where news headlines, analyst opinions, and social media discussions can trigger rapid changes in stock prices. However, the volume and velocity of such information make it nearly impossible for investors or analysts to manually assess its real impact in real time. Traditional models that rely solely on historical price data often fail to capture these behavioral and emotional market drivers.
+
 This project addresses the challenge of quantifying and forecasting stock market movements through sentiment analysis of financial news, aiming to bridge the gap between market psychology and quantitative modeling.
+
+---
 
 # Approach 
 To address the complexity of linking financial sentiment to market behavior, I built an **end-to-end pipeline** that combines **Natural Language Processing (NLP)**, **machine learning**, and **financial data analysis**. 🧠💹  
@@ -46,6 +61,8 @@ The app transforms complex analytics into actionable insights, empowering users 
 ✅ **Summary:**  
 This multi-stage approach bridges qualitative market psychology and quantitative modeling — demonstrating how modern NLP and financial data science can work together to forecast short-term stock movements with data-driven precision.  
 
+---
+
 # Results  
 The final model demonstrated that sentiment extracted from financial news holds **strong predictive power** over short-term stock movements. 📈  
 
@@ -65,7 +82,7 @@ To make the findings interactive, I deployed a **Gradio web app** allowing users
 
 📊 The app and models together form a reproducible, transparent, and interpretable framework for **financial sentiment forecasting**, bridging the gap between human perception and algorithmic insight.  
 
-
+---
 
 # Tech Stack  
 
@@ -89,9 +106,7 @@ To make the findings interactive, I deployed a **Gradio web app** allowing users
 
 This technology stack integrates modern NLP techniques with classical financial modeling — ensuring reproducibility, interpretability, and professional presentation for both technical and non-technical audiences.  
 
-
-
-
+---
 
 ## 🗂️ News Data Overview
 
@@ -154,14 +169,3 @@ The workflow integrates **web scraping**, **NLP preprocessing**, **sentiment ana
 ---
 
 ✅ *This documentation ensures clarity for both collaborators and employers — giving them a clear overview of how sentiment and financial data are integrated for market forecasting.*
-
-
-
-
-
-
-
-
-
-
-
