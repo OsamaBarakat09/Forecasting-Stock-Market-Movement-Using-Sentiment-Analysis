@@ -46,7 +46,7 @@ The app transforms complex analytics into actionable insights, empowering users 
 ✅ **Summary:**  
 This multi-stage approach bridges qualitative market psychology and quantitative modeling — demonstrating how modern NLP and financial data science can work together to forecast short-term stock movements with data-driven precision.  
 
-### 🔹 Results  
+# Results  
 The final model demonstrated that sentiment extracted from financial news holds **strong predictive power** over short-term stock movements. 📈  
 
 After extensive experimentation, the **FinBERT-based model** achieved an average **accuracy of 72%** and an **F1-score of 0.70**, outperforming classical baselines such as Logistic Regression and Random Forest.  
