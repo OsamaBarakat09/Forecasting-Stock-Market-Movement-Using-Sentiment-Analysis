@@ -1,3 +1,18 @@
+# Project Title
+Forecasting stock market movement using Sentiment Analysis
+
+# Problem
+Financial markets are highly sensitive to public sentiment, where news headlines, analyst opinions, and social media discussions can trigger rapid changes in stock prices. However, the volume and velocity of such information make it nearly impossible for investors or analysts to manually assess its real impact in real time. Traditional models that rely solely on historical price data often fail to capture these behavioral and emotional market drivers.
+This project addresses the challenge of quantifying and forecasting stock market movements through sentiment analysis of financial news, aiming to bridge the gap between market psychology and quantitative modeling.
+
+#Approach 
+To address the complexity of linking financial sentiment to market behavior, I built an end-to-end pipeline that combines Natural Language Processing (NLP), machine learning, and financial data analysis. 🧠💹
+1️⃣ Data Acquisition
+The project begins with a large-scale scraping of real financial news from multiple reputable sources — including CNBC, Reuters, and CoinDesk — using Python’s requests, BeautifulSoup, and an intelligent retry mechanism for stable, automated data collection. Each article is timestamped and linked to the relevant stock ticker for accurate temporal alignment with market data.
+2️⃣ Text Preprocessing & Sentiment Extraction
+The raw text is cleaned and normalized through a structured NLP pipeline using NLTK and spaCy. This includes
+
+
 # Forecasting stock market movement using Sentiment Analysis
 This project discusses how fundamental analysis affects the stock market and how news has a significant impact on stock movement.
 # News_Data
