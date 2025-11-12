@@ -124,77 +124,81 @@ These results validate the hypothesis that **market sentiment acts as a leading 
 
 ---
 
-## 🔹 Tech Stack
+## 🧰 Tech Stack
+This project integrates **modern NLP techniques** with **classical financial modeling** to create a robust, interpretable pipeline for stock market forecasting.  
 
-**Languages & Libraries 🐍**
-- Python, Pandas, NumPy, Scikit-learn, XGBoost  
-- NLTK, spaCy, Transformers (FinBERT)  
-- Matplotlib, Seaborn  
+### **Languages & Libraries 🐍**
+- **Python** — Core programming language for data processing, modeling, and deployment  
+- **Pandas & NumPy** — Efficient data manipulation, cleaning, and feature engineering  
+- **Scikit-learn** — Machine learning pipelines, model training, and evaluation  
+- **XGBoost** — High-performance ensemble learning for predictive modeling  
+- **Transformers (Hugging Face)** — Pre-trained **FinBERT** model for financial sentiment analysis  
+- **NLTK & spaCy** — Advanced natural language processing, tokenization, lemmatization, and stopword removal  
+- **Matplotlib & Seaborn** — Data visualization, trend analysis, and exploratory insights  
 
-**Data Sources & APIs 🌐**
-- Yahoo Finance (`yfinance`)  
-- BeautifulSoup & Requests  
+### **Data Sources & APIs 🌐**
+- **Yahoo Finance (`yfinance`)** — Historical market data retrieval for price trends, volume, and indicators  
+- **BeautifulSoup & Requests** — Automated web scraping for collecting financial news  
 
-**Deployment & Visualization 🚀**
-- Gradio (interactive interface)  
-- Streamlit / Hugging Face Spaces (optional)  
-- Git & GitHub  
+### **Deployment & Visualization 🚀**
+- **Gradio** — Interactive web interface for real-time sentiment prediction and market trend visualization  
+- **Streamlit / Hugging Face Spaces (optional)** — Alternative platforms for hosting the interactive dashboard  
+- **Git & GitHub** — Version control, documentation, and portfolio showcase  
 
+### **Why This Stack?**
+This combination of tools ensures:  
+- **Reproducibility:** Anyone can replicate the results using the same libraries and datasets  
+- **Interpretability:** Features, predictions, and sentiment outputs are easy to understand  
+- **Scalability:** The pipeline can handle growing news data and extend to other markets or asset classes  
+- **Professional Presentation:** Interactive dashboards make complex analysis actionable for both technical and non-technical users
 ---
 
 ## 🗂️ News Data Overview
+This project relies on three primary datasets, forming the foundation for sentiment-based stock forecasting. Each dataset is carefully structured to enable **robust modeling** and **reproducible results**.
 
 ### **1️⃣ News_Data**
-- URLs, article text, sentiment labels, date, encoded sentiment  
+Contains the main corpus of financial articles collected from multiple sources.  
+**Purpose:** Provides textual content for sentiment analysis and links it with stock tickers and dates for market prediction.  
+
+**Columns:**
+- **Links** — URLs of individual news articles  
+- **Text** — Full content of the article  
+- **Sentiment** — Labeled sentiment category (`Positive`, `Neutral`, `Negative`)  
+- **Date** — Publication date of each article  
+- **Labeling_Sentiment** — Encoded sentiment labels (`0`, `1`, `2`) for modeling purposes  
 
 ### **2️⃣ News_Links**
-- Base URLs for scraping financial news  
+Contains the list of financial news website URLs from which articles are scraped.  
+**Purpose:** Serves as a source for automated web scraping and ensures coverage of diverse financial news sources.  
+
+**Columns:**
+- **Links** — Base URLs to be crawled for extracting news articles  
 
 ### **3️⃣ Finance_Key_Words**
-- Financial acronyms and terms for filtering news  
+Contains a curated dictionary of **financial terms, acronyms, and company tickers**.  
+**Purpose:** Filters scraped articles to retain only finance-relevant content, improving model accuracy and efficiency.  
+
+**Columns:**
+- **Key** — Financial acronyms, tickers, and terminology extracted from major exchanges and market sources  
+
+✅ **Summary:**  
+These datasets collectively enable the **extraction, preprocessing, and modeling of sentiment-driven stock predictions**, ensuring a reliable and interpretable pipeline for forecasting financial market movements.
 
 ---
 
 ## 🚀 Key Features
-- Web scraping from major financial websites  
-- Text preprocessing & filtering for finance relevance  
-- Sentiment classification using **FinBERT**  
-- Financial indicators (MA, RSI) integrated with sentiment  
-- Interactive visualization via Gradio  
+This project integrates **advanced NLP, financial analysis, and machine learning** to provide a comprehensive solution for sentiment-based stock forecasting. Key features include:
 
----
+- **🌐 Multi-Source Web Scraping:** Collects financial news articles from top platforms such as *Yahoo Finance, CNN, CNBC, Reuters,* and *CoinDesk* for broad market coverage.  
+- **🧹 Text Preprocessing:** Cleans and standardizes news text by removing HTML tags, URLs, special characters, and stopwords, while filtering duplicate or irrelevant content.  
+- **💹 Financial Sentiment Analysis:** Uses **FinBERT**, a pre-trained transformer model tailored for financial text, to classify articles as *Positive*, *Neutral*, or *Negative*.  
+- **📅 Date Standardization:** Ensures all publication dates are formatted consistently (`YYYY-MM-DD`) for accurate temporal alignment with market data.  
+- **📊 Financial Indicators Integration:** Calculates key indicators such as **Moving Averages (MA)** and **Relative Strength Index (RSI)** and merges them with sentiment scores to generate hybrid features.  
+- **🎛️ Interactive Visualization:** Provides a **Gradio dashboard** for real-time sentiment analysis and stock trend visualization, transforming complex analytics into actionable insights.  
+- **🧠 Predictive Modeling:** Implements multiple machine learning models, including **Logistic Regression, Random Forest, XGBoost,** and **Neural Networks with FinBERT embeddings**, evaluated with metrics like accuracy, F1-score, and ROC-AUC.  
 
-## ⚙️ How to Use
-1. Install required Python libraries (`pandas`, `nltk`, `transformers`, `yfinance`, `gradio`)  
-2. Run scraping scripts to collect news data (`News_Data.csv`, `News_Links.csv`)  
-3. Preprocess and clean text  
-4. Apply FinBERT for sentiment analysis  
-5. Standardize publication dates  
-6. Combine sentiment with financial indicators for modeling  
-7. Launch Gradio interface for interactive visualization  
-
----
-
-## 📁 File Structure
-- **News_Data/** — Scraped and cleaned news dataset  
-- **News_Links/** — URLs for scraping  
-- **Finance_Key_Words/** — Financial terms for filtering  
-
----
-
-## 🖼️ Screenshots
-*(Replace the placeholder images with your actual project screenshots)*
-
-![Dashboard Screenshot](https://via.placeholder.com/600x300?text=Gradio+Dashboard)
-![Stock Trend Visualization](https://via.placeholder.com/600x300?text=Stock+Trend+Charts)
-
----
-
-## 🔮 Future Work
-- Extend model to multi-day forecasts  
-- Include social media sentiment (Twitter, Reddit)  
-- Deploy as a fully hosted web app for public use  
-- Explore deep learning transformers for full text sequence analysis  
+✅ **Summary:**  
+These features combine **qualitative and quantitative insights**, creating a **reproducible, interpretable, and practical framework** for forecasting short-term stock movements.
 
 ---
 
