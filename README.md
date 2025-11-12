@@ -39,11 +39,17 @@ Overall, this project demonstrates how modern AI techniques can be applied to th
 ---
 
 ## 🔹 Problem
-Financial markets are highly sensitive to public sentiment, where news headlines, analyst opinions, and social media discussions can trigger rapid changes in stock prices.  
+Financial markets are highly sensitive to public sentiment. News headlines, analyst opinions, and social media discussions can trigger rapid fluctuations in stock prices, often within minutes. However, the **sheer volume, velocity, and diversity of information** make it extremely challenging for investors, analysts, and automated systems to accurately interpret and respond to market-moving news in real time.
 
-However, the sheer volume and velocity of such information make it nearly impossible for investors or analysts to manually assess its real impact in real time. Traditional models that rely solely on historical price data often fail to capture these behavioral and emotional market drivers.  
+Traditional stock prediction models rely predominantly on historical price data and technical indicators. While effective for trend analysis, these models often **fail to capture the behavioral and emotional drivers** behind market movements. This gap results in missed opportunities, delayed reactions to market events, and suboptimal investment decisions.
 
-This project addresses the challenge of **quantifying and forecasting stock market movements** through sentiment analysis of financial news, bridging the gap between market psychology and quantitative modeling.
+The central challenge addressed in this project is:  
+
+- **Quantifying market sentiment** from unstructured textual sources at scale  
+- **Linking sentiment to stock performance** for predictive modeling  
+- **Providing actionable insights** for decision-makers in a timely, interpretable, and reproducible manner  
+
+By tackling this problem, the project demonstrates how modern **Natural Language Processing (NLP)** and **financial data science** techniques can complement traditional modeling approaches, enabling more accurate forecasts of short-term stock price movements and a deeper understanding of market psychology.
 
 ---
 
