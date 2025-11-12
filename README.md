@@ -12,6 +12,47 @@ The project begins with a large-scale scraping of real financial news from multi
 2️⃣ Text Preprocessing & Sentiment Extraction
 The raw text is cleaned and normalized through a structured NLP pipeline using NLTK and spaCy. This includes
 
+### 🔹 Approach  
+To address the complexity of linking financial sentiment to market behavior, I built an **end-to-end pipeline** that combines **Natural Language Processing (NLP)**, **machine learning**, and **financial data analysis**. 🧠💹  
+
+#### **1️⃣ Data Acquisition**  
+The project begins with a large-scale scraping of real financial news from multiple reputable sources — including **CNBC**, **Reuters**, and **CoinDesk** — using **Python’s `requests`**, **`BeautifulSoup`**, and an intelligent retry mechanism for stable, automated data collection. Each article is timestamped and linked to the relevant stock ticker for accurate temporal alignment with market data.  
+
+#### **2️⃣ Text Preprocessing & Sentiment Extraction**  
+The raw text is cleaned and normalized through a structured NLP pipeline using **NLTK** and **spaCy**. This includes:  
+- Removing URLs, HTML tags, and non-alphanumeric noise  
+- Tokenization and lemmatization  
+- Filtering out non-informative words  
+
+Afterward, sentiment is extracted using both **rule-based models (VADER)** for fast benchmarking and **transformer-based models (FinBERT)** to capture nuanced financial language.  
+
+#### **3️⃣ Feature Engineering**  
+Each article’s sentiment score is aggregated by **company and date**, producing daily sentiment indicators. These are then merged with **market variables** (closing price, volume, volatility) pulled from **Yahoo Finance (`yfinance`)**, enabling the creation of hybrid features such as:  
+- Rolling average sentiment  
+- Sentiment volatility  
+- Sentiment-weighted return ratios  
+
+#### **4️⃣ Predictive Modeling**  
+The combined dataset feeds into a **machine learning model** designed to predict next-day stock direction (up/down).  
+Models evaluated include:  
+- Logistic Regression (baseline)  
+- Random Forest and XGBoost (ensemble learning)  
+- FinBERT embeddings + Neural Network (deep learning extension)  
+
+Model performance is assessed using **accuracy**, **F1-score**, **ROC-AUC**, and **cross-validation** to ensure consistency and generalization.  
+
+#### **5️⃣ Interactive Visualization & Deployment**  
+To make the results accessible and practical, I developed an **interactive Gradio dashboard** 🎛️.  
+This allows users to:  
+- Enter any financial headline or news paragraph  
+- Instantly receive a sentiment score and predicted market movement  
+- Visualize sentiment trends over time for any selected ticker  
+
+The app transforms complex analytics into actionable insights, empowering users to understand how public sentiment shapes market trends in real time. 🚀  
+
+✅ **Summary:**  
+This multi-stage approach bridges qualitative market psychology and quantitative modeling — demonstrating how modern NLP and financial data science can work together to forecast short-term stock movements with data-driven precision.  
+
 
 # Forecasting stock market movement using Sentiment Analysis
 This project discusses how fundamental analysis affects the stock market and how news has a significant impact on stock movement.
