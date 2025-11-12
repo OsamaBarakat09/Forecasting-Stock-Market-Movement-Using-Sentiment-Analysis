@@ -52,64 +52,75 @@ The central challenge addressed in this project is:
 By tackling this problem, the project demonstrates how modern **Natural Language Processing (NLP)** and **financial data science** techniques can complement traditional modeling approaches, enabling more accurate forecasts of short-term stock price movements and a deeper understanding of market psychology.
 
 ---
-
-## 🔹 Approach
-To address this challenge, I built an **end-to-end pipeline** combining **Natural Language Processing (NLP)**, **machine learning**, and **financial data analysis**. 🧠💹  
+## 🛠️ Approach
+To tackle the challenge of linking financial sentiment to stock market movements, this project implements a **multi-stage, end-to-end pipeline** combining **Natural Language Processing (NLP)**, **machine learning**, and **financial data analysis**. The approach ensures both **accuracy** and **interpretability**, making it suitable for practical use in trading and investment analysis.  
 
 ### **1️⃣ Data Acquisition**
-- Scraped financial news from **CNBC**, **Reuters**, and **CoinDesk** using **Python `requests`** and **`BeautifulSoup`**  
-- Implemented automated retry and error-handling mechanisms  
-- Linked articles to stock tickers and timestamps for accurate market alignment  
+- Scraped financial news from **CNBC**, **Reuters**, **CoinDesk**, and other major sources 🌐  
+- Used **Python `requests`** and **`BeautifulSoup`** with intelligent retry and error-handling mechanisms for reliable, automated collection  
+- Timestamped and linked each article to relevant **stock tickers** to maintain alignment with market data  
 
 ### **2️⃣ Text Preprocessing & Sentiment Extraction**
-- Cleaned and normalized text using **NLTK** and **spaCy**  
-- Removed HTML tags, special characters, stopwords, and duplicates  
-- Extracted sentiment with **VADER** (baseline) and **FinBERT** (transformer-based) models  
+- Applied **structured NLP pipeline** using **NLTK** and **spaCy** for text cleaning:  
+  - Removed HTML tags, URLs, special characters, and non-alphanumeric noise  
+  - Tokenized and lemmatized text for standardization  
+  - Filtered out stopwords and non-informative words  
+- Extracted sentiment using both **rule-based models (VADER)** for fast evaluation and **transformer-based models (FinBERT)** for nuanced financial language understanding 💹  
 
 ### **3️⃣ Feature Engineering**
-- Aggregated sentiment by company and date to create daily indicators  
-- Combined with **market variables** from **Yahoo Finance (`yfinance`)**  
-- Created hybrid features such as:
+- Aggregated daily sentiment scores by **company and date** to create interpretable indicators  
+- Merged sentiment features with **market variables** from **Yahoo Finance (`yfinance`)**, including:  
+  - Closing price  
+  - Trading volume  
+  - Volatility  
+- Created hybrid features such as:  
   - Rolling average sentiment  
   - Sentiment volatility  
   - Sentiment-weighted return ratios  
 
 ### **4️⃣ Predictive Modeling**
-- Machine learning models used to predict next-day stock direction:  
-  - Logistic Regression (baseline)  
-  - Random Forest & XGBoost (ensemble learning)  
-  - FinBERT embeddings + Neural Network (deep learning extension)  
-- Evaluated with **accuracy**, **F1-score**, **ROC-AUC**, and **cross-validation**  
+- Built machine learning models to predict next-day stock direction (up/down) 📈  
+- Models evaluated include:  
+  - **Logistic Regression** (baseline)  
+  - **Random Forest** and **XGBoost** (ensemble learning)  
+  - **Neural Network** using **FinBERT embeddings** for deep learning extension  
+- Performance metrics: **accuracy**, **F1-score**, **ROC-AUC**, and **cross-validation** for robust evaluation  
 
 ### **5️⃣ Interactive Visualization & Deployment**
-- Developed an **interactive Gradio dashboard** 🎛️  
-- Users can:
-  - Enter any financial headline or article  
-  - Receive sentiment score and predicted stock movement  
-  - Visualize sentiment trends over time  
-- Transforming complex analytics into actionable insights 🚀  
+- Developed an **interactive Gradio dashboard** 🎛️ to allow real-time analysis  
+- Users can:  
+  - Input any financial headline or article  
+  - Instantly receive **sentiment score** and **predicted stock movement**  
+  - Visualize sentiment trends over time for selected tickers  
+- This transforms complex analytics into **actionable insights** for investors and analysts  
 
 ✅ **Summary:**  
-This approach bridges market psychology and quantitative modeling, demonstrating how modern NLP and financial data science can forecast short-term stock movements with data-driven precision.
+This structured, multi-stage approach **bridges market psychology and quantitative modeling**, demonstrating how modern NLP and financial data science techniques can forecast short-term stock movements with **interpretable, actionable results**. It highlights **scalability, reproducibility, and usability**, making the methodology suitable for both research and practical investment applications.
 
 ---
 
-## 🔹 Results
-The **FinBERT-based model** achieved:  
+## 📊 Results
+The pipeline demonstrates that **sentiment extracted from financial news** can be a strong predictor of short-term stock movements. The final **FinBERT-based model** achieved:
+
 - **Accuracy:** 72%  
 - **F1-Score:** 0.70  
+- **Consistency:** Verified through **cross-validation** to ensure robustness  
 
-Key insights:  
-- Positive sentiment days correlate with next-day price increases, especially for high-volume tickers  
-- Sudden sentiment drops can indicate short-term corrections or volatility spikes  
-- Sentiment volatility improves prediction stability and reduces noise  
+### Key Insights
+- **Positive sentiment days** often correlate with **next-day price increases**, particularly for high-volume tickers 🚀  
+- **Sudden sentiment drops** can signal **short-term corrections** or increased volatility ⚡  
+- Incorporating **sentiment volatility** as a feature improves model stability and reduces noise from overly optimistic or pessimistic outliers 🔍  
 
-Interactive Gradio app enables:  
-- Real-time sentiment classification (Positive / Neutral / Negative)  
-- Predicted market direction with probability  
-- Visualization of sentiment trends over time  
+### Interactive Visualization
+- Deployed a **Gradio dashboard** to make findings accessible in real time 🎛️  
+- Users can:  
+  - Input any financial headline or article  
+  - Receive **instant sentiment classification** (Positive / Neutral / Negative)  
+  - View **predicted stock direction** along with probability scores  
+  - Track **sentiment trends over time** for selected tickers  
 
-📊 The system forms a reproducible, transparent, and interpretable framework for **financial sentiment forecasting**.
+### Summary
+These results validate the hypothesis that **market sentiment acts as a leading indicator** when quantified properly and aligned with financial data. The combination of **advanced NLP**, **feature-rich modeling**, and **interactive visualization** provides a **reproducible, interpretable, and actionable framework** for short-term stock forecasting.
 
 ---
 
