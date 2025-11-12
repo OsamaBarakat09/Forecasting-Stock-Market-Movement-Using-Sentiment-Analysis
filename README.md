@@ -67,70 +67,98 @@ To make the findings interactive, I deployed a **Gradio web app** allowing users
 
 
 
+# Tech Stack  
+
+**Languages & Libraries 🐍**  
+- **Python** — Core language for all data processing and modeling  
+- **Pandas** & **NumPy** — Data cleaning, transformation, and feature engineering  
+- **Scikit-learn** — Machine learning pipelines and evaluation metrics  
+- **XGBoost** — Ensemble learning for predictive performance  
+- **Transformers (Hugging Face)** — FinBERT model for financial sentiment analysis  
+- **NLTK** & **spaCy** — Natural language preprocessing and tokenization  
+- **Matplotlib** & **Seaborn** — Data visualization and trend exploration  
+
+**Data Sources & APIs 🌐**  
+- **Yahoo Finance (`yfinance`)** — Historical market data retrieval  
+- **BeautifulSoup & Requests** — Automated web scraping of financial news  
+
+**Deployment & Visualization 🚀**  
+- **Gradio** — Interactive web interface for real-time sentiment prediction  
+- **Streamlit / Hugging Face Spaces (optional)** — Alternative platforms for demo hosting  
+- **Git & GitHub** — Version control, documentation, and portfolio showcase  
+
+This technology stack integrates modern NLP techniques with classical financial modeling — ensuring reproducibility, interpretability, and professional presentation for both technical and non-technical audiences.  
 
 
 
 
 
+## 🗂️ News Data Overview
+
+This project relies on three main datasets that form the foundation for sentiment-based stock forecasting.  
+
+### **1️⃣ News_Data**
+Contains the main corpus of scraped financial articles.  
+**Columns:**
+- **Links** — URLs of individual news articles  
+- **Text** — Full article content extracted from each link  
+- **Sentiment** — Labeled sentiment category (`Positive`, `Neutral`, or `Negative`)  
+- **Date** — Publication date of each article  
+- **Labeling_Sentiment** — Encoded sentiment labels (`0`, `1`, `2`) for modeling  
+
+### **2️⃣ News_Links**
+Contains the list of financial news website URLs from which articles are scraped.  
+**Columns:**
+- **Links** — Base URLs to be crawled for extracting news articles  
+
+### **3️⃣ Finance_Key_Words**
+Contains a curated dictionary of financial terms and company acronyms used to filter relevant content.  
+**Columns:**
+- **Key** — Financial acronyms, tickers, and terminology extracted from major exchanges and market sources  
+
+---
+
+## 📘 Project Summary — *Forecasting Stock Market Movement Using News Data*
+This Jupyter Notebook provides a **comprehensive end-to-end pipeline** for forecasting stock market movements using sentiment extracted from financial news.  
+
+The workflow integrates **web scraping**, **NLP preprocessing**, **sentiment analysis**, and **financial indicators** to generate insights and predict stock price trends.
+
+---
+
+## 🚀 Key Features
+- **Web Scraping:** Gathers news articles from leading financial websites such as *Yahoo Finance, CNN,* and *CNBC*.  
+- **Text Preprocessing:** Cleans text by removing HTML tags, special characters, and stopwords while filtering duplicate or irrelevant content.  
+- **Sentiment Analysis:** Employs **FinBERT**, a pre-trained financial NLP model, to classify articles as *positive*, *negative*, or *neutral*.  
+- **Date Extraction:** Standardizes publication dates into a consistent `YYYY-MM-DD` format.  
+- **Financial Indicators:** Calculates **Moving Averages (MA)** and **Relative Strength Index (RSI)** for trend detection.  
+- **Visualization:** Generates interactive visualizations of stock sentiment, RSI, and price trends via **Matplotlib** and a **Gradio dashboard**.  
+
+---
+
+## ⚙️ How to Use
+1. **Setup:** Install the required libraries (`pandas`, `nltk`, `transformers`, `yfinance`, `gradio`, etc.). Download NLTK resources as needed.  
+2. **Data Collection:** Run scraping scripts to populate `News_Data.csv` and `News_Links.csv`.  
+3. **Text Processing:** Clean, tokenize, and filter the news articles to keep finance-relevant data.  
+4. **Sentiment Analysis:** Apply the **FinBERT** model for sentiment labeling and encoding.  
+5. **Date Extraction:** Standardize all publication dates.  
+6. **Financial Analysis:** Combine sentiment data with financial indicators (MA, RSI) for prediction modeling.  
+7. **Visualization:** Launch the **Gradio interface** to input stock names and visualize sentiment and trend results.  
+
+---
+
+## 📁 File Structure
+- **News_Data/** — Cleaned and labeled news dataset  
+- **News_Links/** — Source URLs for scraping news content  
+- **Finance_Key_Words/** — Keyword list for filtering financial terms  
+
+---
+
+✅ *This documentation ensures clarity for both collaborators and employers — giving them a clear overview of how sentiment and financial data are integrated for market forecasting.*
 
 
 
 
 
-# Forecasting stock market movement using Sentiment Analysis
-This project discusses how fundamental analysis affects the stock market and how news has a significant impact on stock movement.
-# News_Data
-This file contain three data sets:
-- News_Data: That contain:
-  * Links: URLs of websites.
-  * Text: article that we extract it from link.
-  * Sentiment: Labeling data for (Positive & Natural & Negative).
-  * Date: Date of each new.
-  * Labeling_Sentiment: Convert labeling to (0 & 1 & 2).
-    
-- News_Links: That contain:
-  * Links: General links that we will scrap links news that we will scrap text from it.
-    
-- Finance_Key_Words:
-  * Key: Contain almost all acronyms companies in exchanges and finance terms to filter data.
-
-# Project Summary: Forecasting Stock Market Movement Using News Data¶
-* This Jupyter Notebook provides a comprehensive pipeline for forecasting stock market movements by analyzing news data scraped from multiple sources. The project integrates web scraping, natural language processing (NLP), sentiment analysis, and financial indicators to predict stock price trends. Below is a guide to help users understand and utilize the project effectively.
-
-# Key Features¶
-* Web Scraping: The project scrapes news articles from financial websites like Yahoo Finance, CNN, and CNBC. It extracts relevant links and processes them to gather news text and publication dates.
-
-* Text Preprocessing: The news text is cleaned by removing HTML tags, special characters, and stopwords. Duplicate patterns and irrelevant content are filtered out to ensure high-quality data.
-
-* Sentiment Analysis: The project uses the FinBERT model, a pre-trained NLP model specifically designed for financial sentiment analysis. News articles are classified into positive, negative, or neutral sentiments, which are then encoded for further analysis.
-
-* Date Extraction and Formatting: Publication dates are extracted from the news articles and standardized into a consistent format (YYYY-MM-DD).
-
-* Financial Indicators: The project calculates key financial indicators such as Moving Averages and Relative Strength Index (RSI) to analyze stock price trends.
-
-* Visualization: The results are visualized using Matplotlib, showing stock price trends, RSI, and sentiment analysis over time. A Gradio interface is provided for users to input stock names and view the analysis interactively.
-
-# How to Use the Project¶
-* Setup: Ensure you have the required Python libraries installed (pandas, nltk, transformers, yfinance, gradio, etc.). Download the necessary NLTK resources using nltk.download().
-
-* Data Collection: Run the web scraping scripts to collect news data from financial websites. The scraped data is stored in News_Data.csv and News_Links.csv.
-
-* Text Processing: Clean and preprocess the text data to remove noise and irrelevant content. Filter the data to retain only finance-related news articles.
-
-* Sentiment Analysis: Use the FinBERT model to classify the sentiment of each news article. Encode the sentiment labels for further analysis.
-
-* Date Extraction: Extract and format publication dates from the news articles.
-
-* Financial Analysis: Calculate moving averages and RSI for the stock data. Combine sentiment analysis with financial indicators to predict stock price movements.
-
-* Visualization: Use the Gradio interface to input a stock name and visualize the analysis. The output includes plots for stock price trends, RSI, and sentiment analysis.
-
-# File Structure¶
-* News_Data: Contains the scraped news data, including links, text, sentiment, and dates.
-
-* News_Links: Stores the links to the news articles.
-
-* Finance_Key_Words: Contains a list of financial keywords used for filtering finance-related news.
 
 
 
