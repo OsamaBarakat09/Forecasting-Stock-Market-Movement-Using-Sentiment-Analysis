@@ -168,15 +168,17 @@ Contains the main corpus of financial articles collected from multiple sources.
 Contains the list of financial news website URLs from which articles are scraped.  
 **Purpose:** Serves as a source for automated web scraping and ensures coverage of diverse financial news sources.  
 
-**Columns:**
-- **Links** — Base URLs to be crawled for extracting news articles  
+| Column | Description |
+|--------|--------------|
+| `Links` | Base URLs to be crawled for extracting news articles |
 
 ### **3️⃣ Finance_Key_Words**
 Contains a curated dictionary of **financial terms, acronyms, and company tickers**.  
 **Purpose:** Filters scraped articles to retain only finance-relevant content, improving model accuracy and efficiency.  
 
-**Columns:**
-- **Key** — Financial acronyms, tickers, and terminology extracted from major exchanges and market sources  
+| Column | Description |
+|--------|--------------|
+| `Key` | Financial acronyms, tickers, and terminology extracted from major exchanges and market sources |
 
 ✅ **Summary:**  
 These datasets collectively enable the **extraction, preprocessing, and modeling of sentiment-driven stock predictions**, ensuring a reliable and interpretable pipeline for forecasting financial market movements.
