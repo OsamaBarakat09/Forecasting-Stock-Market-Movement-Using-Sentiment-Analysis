@@ -156,12 +156,13 @@ This project relies on three primary datasets, forming the foundation for sentim
 Contains the main corpus of financial articles collected from multiple sources.  
 **Purpose:** Provides textual content for sentiment analysis and links it with stock tickers and dates for market prediction.  
 
-**Columns:**
-- **Links** — URLs of individual news articles  
-- **Text** — Full content of the article  
-- **Sentiment** — Labeled sentiment category (`Positive`, `Neutral`, `Negative`)  
-- **Date** — Publication date of each article  
-- **Labeling_Sentiment** — Encoded sentiment labels (`0`, `1`, `2`) for modeling purposes  
+| Column | Description |
+|--------|--------------|
+| `Links` | URLs of individual news articles |
+| `Text` | Full content of the article |
+| `Sentiment` | Labeled sentiment category (`Positive`, `Neutral`, `Negative`) |
+| `Date` | Publication date of each article   |
+| `Labeling_Sentiment` | Encoded sentiment labels (`0`, `1`, `2`) for modeling purposes |
 
 ### **2️⃣ News_Links**
 Contains the list of financial news website URLs from which articles are scraped.  
